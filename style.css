@@ -1,0 +1,50 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  text-align: center;
+  color: #222;
+}
+
+#mainText {
+  font-size: 4rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+#subText {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* Glowing effect */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff69b4; }
+  to { text-shadow: 0 0 20px #ffa07a; }
+}
+
+/* Balloon class example */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  width: 60px;
+  height: 80px;
+  background: radial-gradient(circle at 50% 20%, #ff77aa, #dd4b7b);
+  border-radius: 50% 50% 50% 50%;
+  animation: floatUp 10s ease-in infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-800px); }
+}
